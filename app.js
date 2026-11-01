@@ -12,7 +12,7 @@ html+=section("Procedure",list(p.procedure,true));
 html+=section("Python code or commands",p.commands.length?p.commands.map(codeBox).join(""):'<p class="callout">No code or command is required for this practical summary. Follow the exact activity assigned by your instructor.</p>');
 html+=section("Expected output",`<div class="output">${esc(p.output)}</div>`);
 if(p.note)html+=section("Important note",`<div class="callout">${esc(p.note)}</div>`);
-if(p.num==="5")html+=section("Original PDF",`<p>Open the manual to compare the Wireshark and Nemesis pages.</p><div class="pdf-actions"><a class="btn primary" href="assets/EH-practicals.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="assets/EH-practicals.pdf" download>Download PDF ↓</a></div>`);
+if(p.num==="5")html+=section("Original PDF",`<p>Open the manual to compare the Wireshark and Nemesis pages.</p><div class="pdf-actions"><a class="btn primary" href="EH-practicals.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="assets/EH-practicals.pdf" download>Download PDF ↓</a></div>`);
 detail.innerHTML=html;window.scrollTo({top:0,behavior:"smooth"});}
 search.addEventListener("input",()=>renderNav(search.value));
 document.addEventListener("click",async e=>{const b=e.target.closest("[data-copy]");if(!b)return;const text=decodeURIComponent(b.dataset.copy);try{await navigator.clipboard.writeText(text);b.textContent="Copied!";setTimeout(()=>b.textContent="Copy",1200);}catch{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();b.textContent="Copied!";setTimeout(()=>b.textContent="Copy",1200);}});
