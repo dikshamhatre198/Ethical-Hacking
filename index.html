@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A simple, searchable Ethical Hacking practical library with notes, commands, expected observations, and the original PDF.">
+<title>EH Practical Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">EH</span><div><strong>Practical Library</strong><small>Ethical Hacking · Practicals 1–10</small></div></div>
+  <div class="top-actions"><a class="pdf-link" href="assets/EH-practicals.pdf" target="_blank" rel="noopener">Open original PDF ↗</a><button id="themeBtn" class="theme-btn" type="button" aria-label="Toggle theme">☾</button></div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <label class="search-label" for="search">Find a practical</label>
+    <input id="search" type="search" placeholder="Search title or topic…">
+    <nav id="practicalNav" aria-label="Practical navigation"></nav>
+    <div class="sidebar-note"><strong>Exam tip</strong><p>Use the PDF button to compare the original manual with these quick notes.</p></div>
+  </aside>
+  <main class="main">
+    <section class="welcome" id="welcome">
+      <div class="eyebrow">YOUR REVISION SPACE</div>
+      <h1>All your practicals.<br><span>In one simple place.</span></h1>
+      <p>Choose a practical from the left to view its aim, theory, procedure, commands or code, and expected output.</p>
+      <div class="welcome-cards"><div><b>10</b><span>Practical numbers</span></div><div><b>Search</b><span>Find topics quickly</span></div><div><b>Copy</b><span>Copy safe commands</span></div></div>
+      <p class="notice"><b>Responsible use:</b> Perform security testing only on your own device, an isolated lab, or systems for which you have explicit permission. Some original-manual activities can disrupt systems or expose private data; this site provides safe lab guidance rather than instructions for attacking real targets.</p>
+    </section>
+    <article id="detail" class="detail hidden"></article>
+    <footer>Personal study resource · Static website · No login or personal data required</footer>
+  </main>
+</div>
+<script src="practicals.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
